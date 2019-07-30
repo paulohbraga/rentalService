@@ -4,15 +4,16 @@ import java.util.Date;
 
 public class CarRental {
 
-	private Vehicle vehicle;
-	private Invoice invoice;
+	private Vehicle vehicle; // Depedencies > new
+	private Invoice invoice; // Depedencies > new 
+	
 	private Date start;
 	private Date finish;
 	
 	public CarRental() {
 	}
 
-	public CarRental(Vehicle vehicle, Date start, Date finish) {
+	public CarRental(Vehicle vehicle, Date start, Date finish) { // Vehicle is instantiate with new - Aggregation
 		this.vehicle = vehicle;
 		this.start = start;
 		this.finish = finish;

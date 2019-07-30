@@ -7,7 +7,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import models.entities.CarRental;
-import models.entities.Invoice;
 import models.entities.Vehicle;
 import models.services.BrazilTaxService;
 import models.services.RentalService;
@@ -32,7 +31,7 @@ public class Program {
 		Date finish = sdf.parse(sc.nextLine());
 		
 		
-		CarRental cr = new CarRental(new Vehicle(carModel), start, finish);
+		CarRental cr = new CarRental(new Vehicle(carModel), start, finish); // cr contains Vehicle and Invoice attributes and methods accessible by . 
 		
 		System.out.print("Enter price hour: ");
 		double pricePerHour = sc.nextDouble();
