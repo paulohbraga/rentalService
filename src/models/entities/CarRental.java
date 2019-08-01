@@ -1,8 +1,9 @@
 package models.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CarRental {
+public class CarRental implements Serializable {
 
 	private Vehicle vehicle; // Depedencies > new
 	private Invoice invoice; // Depedencies > new 

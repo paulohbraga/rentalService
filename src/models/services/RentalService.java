@@ -1,11 +1,19 @@
 package models.services;
 
+import java.io.Serializable;
+
 import models.entities.CarRental;
 import models.entities.Invoice;
 
-public class RentalService {
+public class RentalService implements Serializable{
 	
 	private Double pricePerHour;
+	@Override
+	public String toString() {
+		return "RentalService [pricePerHour=" + pricePerHour + ", pricePerDay=" + pricePerDay + ", taxService="
+				+ taxService + "]";
+	}
+
 	private Double pricePerDay;
 	private TaxService taxService; // Now using interface TaxService.  Any class that implements TaxService could be used with this class.
 	
@@ -44,6 +52,7 @@ public class RentalService {
 	}
 	
 	public void processInvoice(CarRental carRental) {
+		
 		long t1  = carRental.getStart().getTime();
 		long t2 = carRental.getFinish().getTime();
 		double hours = (double) (t2 - t1) / 1000 / 60 / 60;

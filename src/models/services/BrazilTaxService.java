@@ -1,6 +1,8 @@
 package models.services;
 
-public class BrazilTaxService implements TaxService {
+import java.io.Serializable;
+
+public class BrazilTaxService implements TaxService, Serializable {
 
 	public double tax(double amount ) {
 		

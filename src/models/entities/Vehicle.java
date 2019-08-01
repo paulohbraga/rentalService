@@ -1,6 +1,8 @@
 package models.entities;
 
-public class Vehicle {
+import java.io.Serializable;
+
+public class Vehicle implements Serializable {
 	
 	private String model;
 	

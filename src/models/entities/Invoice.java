@@ -1,6 +1,8 @@
 package models.entities;
 
-public class Invoice {
+import java.io.Serializable;
+
+public class Invoice  implements Serializable{
 	
 	private Double basicPayment;
 	private Double tax;
