@@ -23,7 +23,7 @@ public class Program implements Serializable {
 	
 	private static final Long  serialVersionUID = 1L;
 	
-	public static void main(String[] args) throws ParseException, FileNotFoundException{
+	public static void main(String[] args) throws ParseException, FileNotFoundException, ClassNotFoundException{
 		
 		
 		Locale.setDefault(Locale.US);
@@ -65,10 +65,10 @@ public class Program implements Serializable {
 			fileoutput.writeObject(rentalService);
 			fileoutput.close();
 			
-			//FileInputStream	serialfileinput = new FileInputStream(file);
-			//ObjectInputStream fileinput = new ObjectInputStream(serialfileinput);
-			//rentalService2 = (RentalService) fileinput.readObject();
-			//fileinput.close();
+			FileInputStream	serialfileinput = new FileInputStream(file);
+			ObjectInputStream fileinput = new ObjectInputStream(serialfileinput);
+			rentalService2 = (RentalService) fileinput.readObject();
+			fileinput.close();
 			
 		} catch (IOException e) {
 			e.printStackTrace(); 
